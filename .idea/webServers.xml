@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="864772e0-d6bc-4c1a-8f3d-8a6150a27e3a" name="zenoth.x10.mx" url="http://zenoth.x10.mx">
+      <webServer id="99016b79-9dcf-4904-9553-8cfd767bb0b4" name="zenoth.x10.mx" url="http://zenoth.x10.mx">
         <fileTransfer host="zenoth.x10.mx" port="21" rootFolder="/public_html/gameinfo_v2" password="dfcddfc5dfcedfccdfcbdfdedfc2dfcfdfd8df93df99" username="zenoth">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
