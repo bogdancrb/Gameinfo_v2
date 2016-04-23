@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d88bcb2-fbdf-4c15-94cf-e55becec95c4" name="Default" comment="">
+    <list default="true" id="1d88bcb2-fbdf-4c15-94cf-e55becec95c4" name="Default" comment="Indexing configuration">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Gameinfo_v2.iws" />
@@ -304,7 +304,7 @@
       <option name="presentableId" value="Default" />
       <updated>1461278182627</updated>
       <workItem from="1461278183940" duration="3476000" />
-      <workItem from="1461365924847" duration="3851000" />
+      <workItem from="1461365924847" duration="4190000" />
     </task>
     <task id="LOCAL-00001" summary="Enviroment configurations">
       <created>1461370568053</created>
@@ -320,11 +320,32 @@
       <option name="project" value="LOCAL" />
       <updated>1461371489049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Indexing configuration">
+      <created>1461371528915</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461371528915</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Indexing configuration">
+      <created>1461371728138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1461371728138</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added a login module (unfinished)">
+      <created>1461371800042</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1461371800042</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7327000" />
+    <option name="totallyTimeSpent" value="7666000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,7 +365,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19148937" sideWeight="0.5060514" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23567921" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23567921" sideWeight="0.49394855" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -376,7 +397,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Enviroment configurations" />
     <MESSAGE value="Auto updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auto updates" />
+    <MESSAGE value="Indexing configuration" />
+    <MESSAGE value="Added a login module (unfinished)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a login module (unfinished)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
