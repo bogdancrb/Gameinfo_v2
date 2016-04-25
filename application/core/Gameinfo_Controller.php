@@ -12,9 +12,9 @@ class Gameinfo_Controller extends CI_Controller
     protected function loadTemplate($template_name, $vars = array(), $return = false)
     {
         $cfg = array(
-            'site_title'        => $this->config->item('site_title'),
-            'site_copyright'    => $this->config->item('site_copyright'),
-            'title_description'       => isset($vars['title_description']) ?  ' '. self::SEPARATOR . ' ' . $vars['title_description'] : ''
+            'site_title'            => $this->config->item('site_title'),
+            'site_copyright'        => $this->config->item('site_copyright'),
+            'title_description'     => isset($vars['title_description']) ?  ' '. self::SEPARATOR . ' ' . $vars['title_description'] : ''
         );
 
         $content = $this->load->view('page/header', $cfg, $return);
