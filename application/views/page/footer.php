@@ -1,5 +1,8 @@
-    <br><br>
-    <?php echo $site_copyright; ?>
+
+        <br><br>
+        ----------------------------------------------
+        <br><br>
+        <?php echo $site_copyright; ?>
 
     </body>
 
