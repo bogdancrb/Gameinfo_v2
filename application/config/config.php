@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.zenoth.x10.mx';
+$config['base_url'] = 'http://www.zenoth.x10.mx/gameinfo_v2/';
 
 /*
 |--------------------------------------------------------------------------
