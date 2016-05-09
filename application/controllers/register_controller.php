@@ -2,40 +2,42 @@
 
 class Register_controller extends Gameinfo_Controller
 {
-    const PAGE_TITLE_DESCRIPTION = 'Register'; // TODO I need to make a lang for this
+    const PAGE_NAME = 'Register'; // TODO I need to make a lang for this
 
-    private $cfg;
+    private $data;
 
     public function __construct()
     {
         parent::__construct();
 
-        $this->load->helper(array('form', 'url'));
+        $this->load->helper('form');
 
         $this->load->library('form_validation');
 
-        $this->load->model('register_model');
+        $this->load->model(array('register_model', 'user_validation'));
     }
 
     public function index()
     {
-        $this->cfg = array(
-            'title_description'   => self::PAGE_TITLE_DESCRIPTION
+        $this->data = array(
+            'page_name'   => self::PAGE_NAME
         );
 
         $this->validateForm();
 
         if ($this->form_validation->run() == FALSE)
         {
-            $this->loadTemplate('register', $this->cfg);
+            $this->loadTemplate('register', $this->data);
         }
         else
         {
             $post = $this->input->post('register');
 
-            $message = $this->register_model->addNewUser($post);
+            $message = $this->register_model->doRegister($post);
 
-            echo $message;
+            $this->data['message'] = $message;
+            
+            $this->loadTemplate('register', $this->data);
         }
     }
 
@@ -52,7 +54,7 @@ class Register_controller extends Gameinfo_Controller
 
     public function username_check($username)
     {
-        $error = $this->register_model->checkUsername($username);
+        $error = $this->user_validation->checkUsername($username);
 
         if ($error)
         {
@@ -66,7 +68,7 @@ class Register_controller extends Gameinfo_Controller
 
     public function email_check($email)
     {
-        $error = $this->register_model->checkEmailAddress($email);
+        $error = $this->user_validation->checkEmailAddress($email);
 
         if ($error)
         {
