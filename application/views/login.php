@@ -1,16 +1,25 @@
-<?php echo form_open('login'); ?>
-<h3>Login</h3>
+<div id="container">
+    <h1><?php echo $page_name; ?></h1>
 
-<h5>Username</h5>
-<?php echo form_error('username'); ?>
-<input type="text" name="username" value="<?php echo set_value('username'); ?>" size="50" />
+    <div id="body">
+        <p>
+            <?php if (isset($error) && $error) : echo '<div style="color: #E13300">' . $error . '</div>'; endif ?>
 
-<h5>Password</h5>
-<?php echo form_error('password'); ?>
-<input type="password" name="password" value="" size="50" />
+            <?php echo form_open('login'); ?>
 
-<br><br>
+                <h5>Username</h5>
+                <?php echo form_error('login[username]'); ?>
+                <input type="text" name="login[username]" value="<?php echo set_value('login[username]'); ?>" size="50"/>
 
-<div><input type="submit" value="Submit" /></div>
+                <h5>Password</h5>
+                <?php echo form_error('login[password]'); ?>
+                <input type="password" name="login[password]" value="" size="50" />
 
-</form>
+                <br><br>
+
+                <div><input type="submit" value="Submit" /></div>
+
+            </form>
+        </p>
+    </div>
+</div>
