@@ -14,7 +14,7 @@ class Gameinfo_Controller extends CI_Controller
         $cfg = array(
             'site_title'            => $this->config->item('site_title'),
             'site_copyright'        => $this->config->item('site_copyright'),
-            'title_description'     => isset($vars['title_description']) ?  ' '. self::SEPARATOR . ' ' . $vars['title_description'] : ''
+            'page_name'             => isset($vars['page_name']) ?  ' '. self::SEPARATOR . ' ' . $vars['page_name'] : ''
         );
 
         $content = $this->load->view('page/header', $cfg, $return);
