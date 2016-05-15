@@ -47,5 +47,7 @@ $route['login'] = 'login_controller';
 
 $route['register'] = 'register_controller';
 
+$route['logout'] = 'logout_controller';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
