@@ -10,22 +10,24 @@ class Sess_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-
-        $this->load->helper('url');
     }
 
     public function index()
     {
-        echo 'UID: ' . $this->session->userdata('UserID') . '<br>';
-        echo 'Nickname: ' . $this->session->userdata('Nickname') . '<br>';
-        echo 'Logged in: ' . $this->session->userdata('isLogged') . '<br>';
+        echo 'UID: ' . getUserId() . '<br>';
+        echo 'Nickname: ' . getUserNickname() . '<br>';
+        echo 'Email: ' . getUserEmail() . '<br>';
+        echo 'Country: ' . getUserCountry() . '<br>';
+        echo 'Admin: ' . isUserAdmin() . '<br>';
+        echo 'Access level: ' . getAccessLevel() . '<br>';
+        echo 'Logged in: ' . isUserLogged() . '<br>';
 
         echo '<a href="' . base_url() . 'sess_controller/destroy">Destroy session</a>';
     }
 
     public function destroy()
     {
-        $this->session->sess_destroy();
+        clear_session_data();
         redirect('sess_controller');
     }
 }
