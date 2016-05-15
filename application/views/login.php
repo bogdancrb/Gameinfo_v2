@@ -1,6 +1,8 @@
 <div id="container">
     <h1><?php echo $page_name; ?></h1>
 
+    <!--TODO I need to make a lang for all texts-->
+
     <div id="body">
         <p>
             <?php if (isset($error_message) && $error_message) : ?>

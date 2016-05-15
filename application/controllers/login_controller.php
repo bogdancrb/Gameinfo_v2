@@ -44,8 +44,17 @@ class Login_controller extends Gameinfo_Controller
             }
             else
             {
-                $this->login_model->doLogin($post);
-                redirect('home');
+                $error = $this->login_model->doLogin($post);
+
+                if ($error)
+                {
+                    $this->data['error_message'] = $error;
+                    $this->loadTemplate('login', $this->data);
+                }
+                else
+                {
+                    redirect('home');
+                }
             }
         }
     }
