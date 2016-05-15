@@ -10,11 +10,13 @@ class Login_controller extends Gameinfo_Controller
     {
         parent::__construct();
 
-        $this->load->helper(array('form', 'url'));
+        $this->load->helper(array('form'));
 
         $this->load->library('form_validation');
 
         $this->load->model(array('login_model', 'user_validation'));
+
+        $this->checkUserAlreadyLoggedIn();
     }
 
     public function index()
@@ -37,7 +39,7 @@ class Login_controller extends Gameinfo_Controller
 
             if ($error)
             {
-                $this->data['error'] = $error;
+                $this->data['error_message'] = $error;
                 $this->loadTemplate('login', $this->data);
             }
             else

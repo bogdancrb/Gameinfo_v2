@@ -15,11 +15,12 @@ class Login_model extends CI_Model
     public function doLogin($post)
     {
         $this->username = strtolower($post['username']);
-        $this->password = $post['password'];
+        $this->password = hash('sha256', $post['password'], false);
         
-        $user_info = $this->user_db_details->getUserDetails($this->username);
+        $user_info = $this->user_db_details->getUserDetails($this->username, $this->password);
 
         $user_info['isLogged'] = true;
+        $user_info['isAdmin'] = ($user_info['AccessLevel']  ? true : false);
 
         $this->session->set_userdata($user_info);
     }

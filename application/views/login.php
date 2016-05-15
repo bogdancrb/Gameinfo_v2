@@ -3,7 +3,9 @@
 
     <div id="body">
         <p>
-            <?php if (isset($error) && $error) : echo '<div style="color: #E13300">' . $error . '</div>'; endif ?>
+            <?php if (isset($error_message) && $error_message) : ?>
+                <?php echo '<div style="color: #E13300">' . $error_message . '</div>'; ?>
+            <?php endif ?>
 
             <?php echo form_open('login'); ?>
 
