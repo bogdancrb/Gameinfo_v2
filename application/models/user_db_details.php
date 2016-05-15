@@ -10,13 +10,13 @@ class User_db_details extends CI_Model
     public function getUserDetails($username, $password)
     {
         $sqlSyntax = "SELECT u.UserID, Nickname, Email, Country, AccessLevel
-                      FROM (gameinfoV2_users as u LEFT JOIN gameinfoV2_administrators as a ON u.UserID = a.UserID)
+                      FROM ({PRE}users as u LEFT JOIN {PRE}administrators as a ON u.UserID = a.UserID)
                       WHERE Username = ? AND Password = ? LIMIT 1";
         $result = $this->db->query($sqlSyntax, array($username, $password));
 
         if ($result->num_rows() == 1)
         {
-            return $result->result_array()[0];
+            return $result->row_array();
         }
 
         return false;
