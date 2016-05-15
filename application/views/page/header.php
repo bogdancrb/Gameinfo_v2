@@ -20,17 +20,18 @@
             <a href="login">Login</a> |
             <a href="register">Register</a> |
         <?php else : ?>
-            <a href="#">My Games</a> |
+            <a href="library">My Games</a> |
         <?php endif ?>
         <a href="mailto:contact@zenoth.x10.mx">Contact</a>
 
         <?php if (isUserLogged() === true) : ?>
             <div class="menu_logged_user">
                 <?php if (isUserAdmin() === true) : ?>
-                    <a href="#">Admin Panel</a> |
+                    <a href="apanel">Admin Panel</a> |
+                    <a href="mpanel">Moderator Panel</a> |
                     <a href="sess_controller">*Session vars*</a> |
                 <?php endif ?>
-                <a href="#"><?php echo getUserNickname(); ?></a> |
+                <a href="profile"><?php echo getUserNickname(); ?></a> |
                 <a href="logout">Logout</a>
             </div>
         <?php endif ?>
