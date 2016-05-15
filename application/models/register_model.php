@@ -27,7 +27,7 @@ class Register_model extends CI_Model
 
     protected function insertUserIntoDB()
     {
-        $sqlSyntax = "INSERT INTO gameinfoV2_users (Nickname, Username, Password, Email, RegDate, Country) VALUES (?, ?, ?, ?, ?, ?)";
+        $sqlSyntax = "INSERT INTO {PRE}users (Nickname, Username, Password, Email, RegDate, Country) VALUES (?, ?, ?, ?, ?, ?)";
         $this->db->query($sqlSyntax, array($this->nickname, $this->username, $this->password, $this->email, date("Y-m-d H:i:s"), $this->country));
     }
 }

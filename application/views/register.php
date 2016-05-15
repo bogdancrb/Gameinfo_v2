@@ -1,5 +1,7 @@
 <div id="container">
     <h1><?php echo $page_name; ?></h1>
+
+    <!--TODO I need to make a lang for all texts-->
     
     <div id="body">
         <p>
@@ -7,7 +9,7 @@
             <?php else : ?>
                 <?php echo form_open('register'); ?>
 
-                    <h5>Username</h5>
+                    <h5>Username</h5> 
                     <?php echo form_error('register[username]'); ?>
                     <input type="text" name="register[username]" value="<?php echo set_value('register[username]'); ?>" size="50" />
 
