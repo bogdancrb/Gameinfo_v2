@@ -7,10 +7,12 @@ class User_db_details extends CI_Model
         parent::__construct();
     }
 
-    public function getUserDetails($username)
+    public function getUserDetails($username, $password)
     {
-        $sqlSyntax = "SELECT UserID, Nickname FROM gameinfoV2_users WHERE Username = ? LIMIT 1";
-        $result = $this->db->query($sqlSyntax, array($username));
+        $sqlSyntax = "SELECT u.UserID, Nickname, Email, Country, AccessLevel
+                      FROM (gameinfoV2_users as u LEFT JOIN gameinfoV2_administrators as a ON u.UserID = a.UserID)
+                      WHERE Username = ? AND Password = ? LIMIT 1";
+        $result = $this->db->query($sqlSyntax, array($username, $password));
 
         if ($result->num_rows() == 1)
         {
