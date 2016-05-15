@@ -32,4 +32,12 @@ class Gameinfo_Controller extends CI_Controller
             return false;
         }
     }
+
+    protected function checkUserAlreadyLoggedIn()
+    {
+        if (isUserLogged())
+        {
+            redirect('home');
+        }
+    }
 }
