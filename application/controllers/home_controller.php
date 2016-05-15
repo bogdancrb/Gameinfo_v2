@@ -2,21 +2,36 @@
 
 class Home_controller extends Gameinfo_Controller
 {
-    const PAGE_NAME = 'Home'; // TODO I need to make a lang for this
+    const PAGE_NAME = 'News'; // TODO I need to make a lang for this
 
     private $data;
 
     public function __construct()
     {
         parent::__construct();
+
+        $this->load->model('home_model');
     }
 
     public function index()
     {
+        $this->load->library('parser');
+
         $this->data = array(
             'page_name'   => self::PAGE_NAME
         );
 
-        $this->loadTemplate('home', $this->data);
+        $articles = $this->home_model->getNewsArticles();
+
+        if (is_array($articles))
+        {
+            $this->data['news_articles'] = $articles;
+        }
+        else
+        {
+            $this->data['error'] = $articles;
+        }
+
+        $this->loadTemplate('home', $this->data, false, true);
     }
 }
