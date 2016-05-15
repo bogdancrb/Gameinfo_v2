@@ -9,7 +9,7 @@ class Gameinfo_Controller extends CI_Controller
         parent::__construct();
     }
 
-    protected function loadTemplate($template_name, $vars = array(), $return = false)
+    protected function loadTemplate($template_name, $vars = array(), $return = false, $parse = false)
     {
         $cfg = array(
             'site_title'            => $this->config->item('site_title'),
@@ -19,7 +19,14 @@ class Gameinfo_Controller extends CI_Controller
 
         $content = $this->load->view('page/header', $cfg, $return);
 
-        $content .= $this->load->view($template_name, $vars, $return);
+        if (!$parse)
+        {
+            $content .= $this->load->view($template_name, $vars, $return);
+        }
+        else
+        {
+            $content .= $this->parser->parse($template_name, $vars, $return);
+        }
 
         $content .= $this->load->view('page/footer', $cfg, $return);
 
