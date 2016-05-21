@@ -59,3 +59,12 @@ p.footer{
 {
     float: right;
 }
+
+.content_text_overflow
+{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 9.5em;
+    line-height: 1.6em;
+}
