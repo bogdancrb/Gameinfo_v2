@@ -26,6 +26,15 @@ class Home_controller extends Gameinfo_Controller
         if (is_array($articles))
         {
             $this->data['news_articles'] = $articles;
+
+            if (strlen($this->data['news_articles']['news_content']) > 100)
+            {
+                $this->data['news_articles']['news_read_more'] = 'Read more';
+            }
+            else
+            {
+                $this->data['news_articles']['news_read_more'] = '';
+            }
         }
         else
         {
