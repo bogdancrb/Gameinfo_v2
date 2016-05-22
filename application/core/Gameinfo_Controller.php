@@ -19,6 +19,8 @@ class Gameinfo_Controller extends CI_Controller
 
         $content = $this->load->view('page/header', $cfg, $return);
 
+        $content = $this->load->view('page/main_menu');
+
         if (!$parse)
         {
             $content .= $this->load->view($template_name, $vars, $return);
@@ -40,9 +42,17 @@ class Gameinfo_Controller extends CI_Controller
         }
     }
 
-    protected function checkUserAlreadyLoggedIn()
+    protected function redirectIfUserLoggedIn()
     {
         if (isUserLogged())
+        {
+            redirect('home');
+        }
+    }
+
+    protected function redirectIfUserNotAdmin()
+    {
+        if (!isUserAdmin())
         {
             redirect('home');
         }
