@@ -49,5 +49,8 @@ $route['register'] = 'register_controller';
 
 $route['logout'] = 'logout_controller';
 
+$route['apanel'] = 'admin_panel_controller';
+$route['apanel/manage/(:any)'] = 'admin_panel_controller/$1';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

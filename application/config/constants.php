@@ -36,6 +36,16 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/*
+|--------------------------------------------------------------------------
+| Directory
+|--------------------------------------------------------------------------
+|
+| These defines are used for directory manipulation.
+|
+*/
+
+define('DS',        '/'); // directory separator
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
