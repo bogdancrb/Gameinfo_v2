@@ -16,7 +16,7 @@ class Login_controller extends Gameinfo_Controller
 
         $this->load->model(array('login_model', 'user_validation'));
 
-        $this->checkUserAlreadyLoggedIn();
+        $this->redirectIfUserLoggedIn();
     }
 
     public function index()
@@ -67,7 +67,7 @@ class Login_controller extends Gameinfo_Controller
         $this->form_validation->set_error_delimiters('<div style="color: #E13300">', '</div>');
     }
 
-    public function password_check($username, $password)
+    private function password_check($username, $password)
     {
         $error = $this->user_validation->checkPassword(strtolower($username), hash('sha256', $password, false));
 

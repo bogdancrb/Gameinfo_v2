@@ -7,7 +7,7 @@
         <p>
             <?php if (isset($error_message) && $error_message) : ?>
                 <?php echo '<div style="color: #E13300">' . $error_message . '</div>'; ?>
-            <?php endif ?>
+            <?php endif; ?>
 
             <?php echo form_open('login'); ?>
 

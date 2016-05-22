@@ -16,7 +16,7 @@ class Register_controller extends Gameinfo_Controller
 
         $this->load->model(array('register_model', 'user_validation'));
         
-        $this->checkUserAlreadyLoggedIn();
+        $this->redirectIfUserLoggedIn();
     }
 
     public function index()

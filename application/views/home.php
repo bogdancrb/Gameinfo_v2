@@ -6,17 +6,17 @@
             <p><?php echo $error; ?></p>
         <?php else: ?>
             {news_articles}
-            <h3>{news_title}</h3>
-            Published by <b><a href="profile/view/{news_author_id}">{news_author}</a></b> on <b>{news_date}</b><br>
-            Article about <b>{news_game}</b>
-            <p>
-                <div class="content_text_overflow">{news_content}</div>
-                <br><br>
-                <a href="news/read/{news_id}">{news_read_more}</a> <!-- TODO Make lang for this -->
-                <br><br>
-                ------------------------------------------------------------------------------------------------------------
-            </p>
+                <h3>{news_title}</h3>
+                Published by <b><a href="profile/view/{news_author_id}">{news_author}</a></b> on <b>{news_date}</b><br>
+                Article about <b>{news_game}</b>
+                <p>
+                    <div class="content_text_overflow">{news_content}</div>
+                    <br>
+                    <a href="news/read/{news_id}">{news_read_more}</a> <!-- TODO Make lang for this -->
+                    <br>
+                    ------------------------------------------------------------------------------------------------------------
+                </p>
             {/news_articles}
-        <?php endif ?>
+        <?php endif; ?>
     </div>
 </div>

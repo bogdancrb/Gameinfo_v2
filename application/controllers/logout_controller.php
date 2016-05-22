@@ -21,7 +21,7 @@ class Logout_controller extends Gameinfo_Controller
         {
             clear_session_data();
             
-            $this->data['message'] = 'You have logged out of your account. <br> Redirecting to home page in 5 seconds.'; // TODO I need to make a lang for this
+            $this->data['message'] = 'You have been logged out of your account. <br> Redirecting to home page in 5 seconds.'; // TODO I need to make a lang for this
         }
         else
         {

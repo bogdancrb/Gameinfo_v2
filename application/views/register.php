@@ -34,7 +34,7 @@
                     <div><input type="submit" value="Submit" /></div>
 
                 </form>
-            <?php endif ?>
+            <?php endif; ?>
         </p>
     </div>
 
