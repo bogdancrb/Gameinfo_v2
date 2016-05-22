@@ -60,11 +60,27 @@ p.footer{
     float: right;
 }
 
-.content_text_overflow
+.admin_news_add
 {
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 9.5em;
-    line-height: 1.6em;
+    float: right;
+}
+
+.admin_news_table
+{
+    width: 100%;
+}
+
+th.admin_news_title
+{
+    width: 50%;
+}
+
+.admin_news_table,
+.admin_news_table tr,
+.admin_news_table th,
+.admin_news_table td
+{
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: center;
 }
