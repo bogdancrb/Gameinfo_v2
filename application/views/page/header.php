@@ -14,25 +14,5 @@
     </head>
 
     <body>
-        <!-- TODO Create lang for menu and make this more dynamic -->
-        <a href="home">Home</a> |
-        <?php if (isUserLogged() === false) : ?>
-            <a href="login">Login</a> |
-            <a href="register">Register</a> |
-        <?php else : ?>
-            <a href="library">My Games</a> |
-        <?php endif ?>
-        <a href="mailto:contact@zenoth.x10.mx">Contact</a>
-
-        <?php if (isUserLogged() === true) : ?>
-            <div class="menu_logged_user">
-                <?php if (isUserAdmin() === true) : ?>
-                    <a href="apanel">Admin Panel</a> |
-                    <a href="mpanel">Moderator Panel</a> |
-                    <a href="sess_controller">*Session vars*</a> |
-                <?php endif ?>
-                <a href="profile"><?php echo getUserNickname(); ?></a> |
-                <a href="logout">Logout</a>
-            </div>
-        <?php endif ?>
+    
 
