@@ -84,3 +84,18 @@ th.admin_news_title
     border-collapse: collapse;
     text-align: center;
 }
+
+.popup
+{
+    padding: 15px;
+    color: black;
+    background-color: lightgrey;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.news_content
+{
+    white-space: pre-wrap;
+}

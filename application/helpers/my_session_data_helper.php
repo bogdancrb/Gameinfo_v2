@@ -21,7 +21,7 @@ if ( ! function_exists('getUserId'))
     function getUserId()
     {
         $ci = &get_instance();
-        $user_id = $ci->session->userdata('UserID');
+        $user_id = $ci->session->userdata('user_id');
 
         if (!empty($user_id))
         {
@@ -37,7 +37,7 @@ if ( ! function_exists('getUserNickname'))
     function getUserNickname()
     {
         $ci = &get_instance();
-        $user_nickname = $ci->session->userdata('Nickname');
+        $user_nickname = $ci->session->userdata('user_nickname');
 
         if (!empty($user_nickname))
         {
@@ -53,7 +53,7 @@ if ( ! function_exists('getUserEmail'))
     function getUserEmail()
     {
         $ci = &get_instance();
-        $user_email = $ci->session->userdata('Email');
+        $user_email = $ci->session->userdata('user_email');
 
         if (!empty($user_email))
         {
@@ -69,7 +69,7 @@ if ( ! function_exists('getUserCountry'))
     function getUserCountry()
     {
         $ci = &get_instance();
-        $user_country = $ci->session->userdata('Country');
+        $user_country = $ci->session->userdata('user_country');
 
         if (!empty($user_country))
         {
@@ -117,7 +117,7 @@ if ( ! function_exists('getAccessLevel'))
     function getAccessLevel()
     {
         $ci = &get_instance();
-        $user_access_level = $ci->session->userdata('AccessLevel');
+        $user_access_level = $ci->session->userdata('user_access_level');
 
         if (!empty($user_access_level))
         {

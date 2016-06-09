@@ -11,10 +11,8 @@ class Login_controller extends Gameinfo_Controller
         parent::__construct();
 
         $this->load->helper(array('form'));
-
         $this->load->library('form_validation');
-
-        $this->load->model(array('login_model', 'user_validation'));
+        $this->load->model(array('login_model', 'validation/user_validation'));
 
         $this->redirectIfUserLoggedIn();
     }
@@ -35,7 +33,7 @@ class Login_controller extends Gameinfo_Controller
         {
             $post = $this->input->post('login');
 
-            $error = $this->password_check($post['username'], $post['password']);
+            $error = $this->validate_password($post['username'], $post['password']);
 
             if ($error)
             {
@@ -67,7 +65,7 @@ class Login_controller extends Gameinfo_Controller
         $this->form_validation->set_error_delimiters('<div style="color: #E13300">', '</div>');
     }
 
-    private function password_check($username, $password)
+    private function validate_password($username, $password)
     {
         $error = $this->user_validation->checkPassword(strtolower($username), hash('sha256', $password, false));
 

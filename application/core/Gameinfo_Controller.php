@@ -9,7 +9,15 @@ class Gameinfo_Controller extends CI_Controller
         parent::__construct();
     }
 
-    protected function loadTemplate($template_name, $vars = array(), $return = false, $parse = false)
+	/**
+     * Load the template with header, main menu and footer
+     * @param $view_name
+     * @param array $vars
+     * @param bool $return
+     * @param bool $parse
+     * @return bool|string
+     */
+    protected function loadTemplate($view_name, $vars = array(), $return = false, $parse = false)
     {
         $cfg = array(
             'site_title'            => $this->config->item('site_title'),
@@ -19,15 +27,15 @@ class Gameinfo_Controller extends CI_Controller
 
         $content = $this->load->view('page/header', $cfg, $return);
 
-        $content = $this->load->view('page/main_menu');
+        $content .= $this->load->view('page/main_menu');
 
         if (!$parse)
         {
-            $content .= $this->load->view($template_name, $vars, $return);
+            $content .= $this->load->view($view_name, $vars, $return);
         }
         else
         {
-            $content .= $this->parser->parse($template_name, $vars, $return);
+            $content .= $this->parser->parse($view_name, $vars, $return);
         }
 
         $content .= $this->load->view('page/footer', $cfg, $return);

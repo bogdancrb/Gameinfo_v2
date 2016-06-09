@@ -9,7 +9,7 @@ class Login_model extends CI_Model
     {
         parent::__construct();
 
-        $this->load->model('user_db_details');
+        $this->load->model('db_details/user_db_details');
     }
 
     public function doLogin($post)
@@ -17,16 +17,16 @@ class Login_model extends CI_Model
         $this->username = strtolower($post['username']);
         $this->password = hash('sha256', $post['password'], false);
 
-        $user_info = $this->user_db_details->getUserDetails($this->username, $this->password);
+        $user_info = $this->user_db_details->getUser($this->username, $this->password);
 
         if ($user_info)
         {
             $user_info['isLogged'] = true;
-            $user_info['isAdmin'] = ($user_info['AccessLevel'] ? true : false);
+            $user_info['isAdmin'] = ($user_info['user_access_level'] ? true : false);
 
             $this->session->set_userdata($user_info);
 
-            return false;
+            return null;
         }
         else
         {

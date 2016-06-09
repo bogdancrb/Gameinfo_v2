@@ -27,7 +27,7 @@
 
                     <br><br>
 
-                        <div><input type="submit" value="Submit" /></div>
+                    <div><input type="submit" value="Submit" /></div>
 
                 </form>
             <?php endif; ?>

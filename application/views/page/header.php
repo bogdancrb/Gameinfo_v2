@@ -9,7 +9,7 @@
             crossorigin="anonymous">
         </script>
 
-        <?php echo auto_version(link_tag('css/gameinfo.css')); ?>
+        <?php echo link_tag('css/gameinfo.css'); ?>
 
     </head>
 

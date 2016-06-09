@@ -13,7 +13,6 @@
         <?php if (isUserAdmin() === true) : ?>
             <?php echo anchor('apanel', 'Admin Panel'); ?> |
             <?php echo anchor('mpanel', 'Moderator Panel'); ?> |
-            <?php echo anchor('sess_controller', '*Session vars*'); ?> |
         <?php endif; ?>
         <?php echo anchor('profile', getUserNickname()); ?> |
         <?php echo anchor('logout', 'Logout'); ?>

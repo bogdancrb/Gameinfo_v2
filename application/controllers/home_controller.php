@@ -4,6 +4,7 @@ class Home_controller extends Gameinfo_Controller
 {
     const PAGE_NAME = 'News'; // TODO I need to make a lang for this
     const MAX_CONTENT_SIZE = 1000;
+    const MAX_CONTENT_NEWLINES = 5;
 
     private $data;
 
@@ -11,7 +12,7 @@ class Home_controller extends Gameinfo_Controller
     {
         parent::__construct();
 
-        $this->load->model('article_db_details');
+        $this->load->model('db_details/article_db_details');
     }
 
     public function index()
@@ -22,7 +23,7 @@ class Home_controller extends Gameinfo_Controller
             'page_name'   => self::PAGE_NAME
         );
 
-        $articles = $this->article_db_details->getNewsArticlesDetails();
+        $articles = $this->article_db_details->getAllNewsArticles();
 
         if (is_array($articles))
         {
@@ -30,17 +31,12 @@ class Home_controller extends Gameinfo_Controller
             {
                 if (strlen($news_article['news_content']) > self::MAX_CONTENT_SIZE)
                 {
-                    $news_article['news_content'] = substr($news_article['news_content'], 0, self::MAX_CONTENT_SIZE) . '...';
-                    $news_article['news_read_more'] = 'Read more';
-                }
-                else
-                {
-                    $news_article['news_read_more'] = null;
+                    $news_article['news_content'] = substr($news_article['news_content'], 0,  self::MAX_CONTENT_SIZE) . '...';
                 }
 
                 if (empty($news_article['news_game']))
                 {
-                    $news_article['news_game'] = 'gaming in general';
+                    $news_article['news_game'] = 'gaming in general'; // TODO Make lang for this
                 }
 
                 $articles[$key] = $news_article;

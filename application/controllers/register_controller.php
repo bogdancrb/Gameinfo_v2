@@ -11,10 +11,8 @@ class Register_controller extends Gameinfo_Controller
         parent::__construct();
 
         $this->load->helper('form');
-
         $this->load->library('form_validation');
-
-        $this->load->model(array('register_model', 'user_validation'));
+        $this->load->model(array('register_model', 'validation/user_validation'));
         
         $this->redirectIfUserLoggedIn();
     }

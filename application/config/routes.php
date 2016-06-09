@@ -15,7 +15,7 @@
 | so that a different class/function is called than the one
 | corresponding to the URL.
 |
-| Please see the user guide for complete details:
+| Please see the user guide for complete db_details:
 |
 |	http://codeigniter.com/user_guide/general/routing.html
 |
@@ -42,6 +42,8 @@ $route['default_controller'] = "home_controller";
 $route['404_override'] = '';
 
 $route['home'] = 'home_controller';
+
+$route['news/(:any)'] = 'article_controller/$1';
 
 $route['login'] = 'login_controller';
 

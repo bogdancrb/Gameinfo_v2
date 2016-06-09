@@ -10,9 +10,9 @@
                 Published by <b><a href="profile/view/{news_author_id}">{news_author}</a></b> on <b>{news_date}</b><br>
                 Article about <b>{news_game}</b>
                 <p>
-                    <div class="content_text_overflow">{news_content}</div>
+                    <div class="news_content">{news_content}</div>
                     <br>
-                    <a href="news/read/{news_id}">{news_read_more}</a> <!-- TODO Make lang for this -->
+                    <a href="news/read/{news_id}">View article</a> <!-- TODO Make lang for this -->
                     <br>
                     ------------------------------------------------------------------------------------------------------------
                 </p>
