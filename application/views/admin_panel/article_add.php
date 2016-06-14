@@ -22,7 +22,7 @@
 
                     <h5>Content</h5>
                     <?php echo form_error('article[content]'); ?>
-                    <textarea name="article[content]" placeholder="Write the news article." rows="30" cols="100"><?php
+                    <textarea name="article[content]" placeholder="Write the news article." rows="30" style="width: 65%"><?php
                         echo set_value('article[content]'); ?></textarea>
 
                     <br><br>

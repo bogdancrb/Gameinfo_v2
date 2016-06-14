@@ -58,8 +58,8 @@
             $('.popup').remove();
 
             $('body').append('<div class="popup">' +
-                            '<a href="articles/remove/'+ newsID +'">Remove</a> | ' +
-                            '<a href="articles/edit/'+ newsID +'">Edit</a>' +
+                            '<a href="articles/edit/'+ newsID +'">Edit</a> | ' +
+                            '<a href="articles/remove/'+ newsID +'">Delete</a>' +
                             '</div>');
 
             $('.popup').css({

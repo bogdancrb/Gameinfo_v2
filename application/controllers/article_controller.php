@@ -1,8 +1,10 @@
 <?php
 
 /**
- *  @property Article_db_details $article_db_details
- *  @property Comment_model $comment_model
+ * @property CI_Input $input                      Pre-processes global input data for security
+ * @property CI_Form_validation $form_validation  Form Validation Class
+ * @property Article_db_details $article_db_details
+ * @property Comment_model $comment_model
 **/
 
 class Article_controller extends Gameinfo_Controller
@@ -44,11 +46,6 @@ class Article_controller extends Gameinfo_Controller
 				}
 
 				$this->data['page_name'] = $article['news_title'];
-
-				if (empty($article['news_game']))
-				{
-					$article['news_game'] = 'gaming in general'; // TODO Make lang for this
-				}
 
 				$this->data = array_merge($this->data, $article);
 

@@ -36,7 +36,7 @@ class Home_controller extends Gameinfo_Controller
 
                 if (empty($news_article['news_game']))
                 {
-                    $news_article['news_game'] = 'gaming in general'; // TODO Make lang for this
+                    $news_article['news_game'] = 'gaming in general'; // TODO Figure a way out to get rid of this, maybe with TWIG :)
                 }
 
                 $articles[$key] = $news_article;
