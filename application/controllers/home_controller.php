@@ -4,7 +4,6 @@ class Home_controller extends Gameinfo_Controller
 {
     const PAGE_NAME = 'News'; // TODO I need to make a lang for this
     const MAX_CONTENT_SIZE = 1000;
-    const MAX_CONTENT_NEWLINES = 5;
 
     private $data;
 

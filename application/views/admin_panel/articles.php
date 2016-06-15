@@ -14,7 +14,7 @@
             <?php if (isset($error) && $error) : ?>
                 <?php echo $error; ?>
             <?php else: ?>
-            <table class="custom_table admin_table">
+            <table class="custom_table_width custom_table admin_table">
                 <tr>
                     <th class="custom_table_title">Article title</th>
                     <th>Author</th>

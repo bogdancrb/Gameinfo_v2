@@ -45,7 +45,8 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 |
 */
 
-define('DS',        '/'); // directory separator
+define('DS',                '/'); // directory separator
+define('GAME_IMG_FOLDER',   'uploads/game_imgs/'); // folder with game images
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

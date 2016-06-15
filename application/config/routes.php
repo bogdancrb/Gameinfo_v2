@@ -55,6 +55,9 @@ $route['apanel'] = 'admin_panel_controller';
 $route['apanel/manage/(:any)'] = 'admin_panel_controller/$1';
 
 $route['library'] = 'library_controller';
+$route['library/view/(:any)'] = 'library_controller/viewGameDetails/$1';
+$route['library/add'] = 'library_controller/addGameToLibrary';
+$route['library/delete/(:any)'] = 'library_controller/deleteGameFromLibrary/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

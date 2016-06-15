@@ -58,6 +58,14 @@ class Gameinfo_Controller extends CI_Controller
         }
     }
 
+    protected function redirectIfUserNotLoggedIn()
+    {
+        if (!isUserLogged())
+        {
+            redirect('home');
+        }
+    }
+
     protected function redirectIfUserNotAdmin()
     {
         if (!isUserAdmin())

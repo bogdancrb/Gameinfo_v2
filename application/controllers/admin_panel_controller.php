@@ -86,7 +86,7 @@ class Admin_panel_controller extends Gameinfo_Controller
 
         $this->validateAddArticleForm();
 
-        $gamesData = $this->game_db_details->getAllGames(false);
+        $gamesData = $this->game_db_details->getAllGames();
 
         $gameListOptions[''] = 'None'; // TODO Make lang for this
 
@@ -138,7 +138,7 @@ class Admin_panel_controller extends Gameinfo_Controller
 			{
 				$this->validateAddArticleForm();
 
-				$gamesData = $this->game_db_details->getAllGames(false);
+				$gamesData = $this->game_db_details->getAllGames();
 
 				$gameListOptions[''] = 'None'; // TODO Make lang for this
 
