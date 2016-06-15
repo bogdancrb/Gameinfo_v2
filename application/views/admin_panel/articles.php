@@ -14,9 +14,9 @@
             <?php if (isset($error) && $error) : ?>
                 <?php echo $error; ?>
             <?php else: ?>
-            <table class="admin_news_table">
+            <table class="custom_table admin_table">
                 <tr>
-                    <th class="admin_news_title">Article title</th>
+                    <th class="custom_table_title">Article title</th>
                     <th>Author</th>
                     <th>Game</th>
                     <th>Date</th>

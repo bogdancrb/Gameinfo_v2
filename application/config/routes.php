@@ -54,5 +54,7 @@ $route['logout'] = 'logout_controller';
 $route['apanel'] = 'admin_panel_controller';
 $route['apanel/manage/(:any)'] = 'admin_panel_controller/$1';
 
+$route['library'] = 'library_controller';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
